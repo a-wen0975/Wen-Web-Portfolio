@@ -15,6 +15,18 @@
     font-family: 'Cocogoose';
     src: url(../fonts/Cocogoose.ttf) format('truetype');
 }
+@font-face {
+    font-family: 'Cocogoose-thin';
+    src: url(../fonts/Cocogoose-thin.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Cocogoose-light';
+    src: url(../fonts/Cocogoose-light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Cocogoose-reg';
+    src: url(../fonts/Cocogoose-reg.ttf) format('truetype');
+}
 
 .html {
     margin: 0;
@@ -43,21 +55,46 @@
 
 .nav-bar a{
     float: right;
-    color: #2e422f;
+    color: #182718;
+    /* 2e422f */
     padding-top: .8em;
     padding-bottom: .8em;
     text-align: center;
     font-family: 'Red Hands';
     text-decoration: none;
     padding-left: 1em;
-    padding-right: 2em;
+    padding-right: 3em;
 }
 .nav-bar a:hover{
     color: white;
 }
 
-/* -----------HOME PAG0E----------- */
+.nav-bar #nav-name {
+    text-align: left;
+    padding-top: .9em;
+    padding-bottom: .8em;
+    margin: 0em;
+    display: inline-block;
+    font-family: 'Cocogoose-light';
+    /* font-family: "Baby Doll"; */
+    font-size: 18px;
+}
 
+/* -----------HOME PAG0E----------- */
+@keyframes home {
+    from {font-size: 80 px;}
+    to {font-size: 100px;}
+}
+.home-body #hi{
+    animation-name: home;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes home-caption {
+    from {font-size: 5px;}
+    to {font-size: 20px;}
+}
 /* b0e0ad */
 .home-body {
     /* background-color: #d0f2ce; */
@@ -71,7 +108,7 @@
 }
 
 .home-body p{
-    font-size: 100px;
+    /* font-size: 100px; */
     /* font-family: 'Copy Duck'; */
     font-family: "Cocogoose";
     text-align: center;
@@ -84,7 +121,11 @@
 
 #home-description {
     font-family: "Cocogoose";
-    font-size: 20px;
+    /* font-size: 20px; */
+    animation-name: home-caption;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    padding-bottom: 3em;
 }
 
 .home-body img{
@@ -93,6 +134,10 @@
     margin-left: auto;
     margin-right: auto;
     size: 50%;
+}
+
+#gif1 {
+    width: 300px;
 }
 
 /* -----------ABOUT ME----------- */
@@ -138,7 +183,7 @@
     justify-content: center;
     gap: 50px;
     font-family: 'Cocogoose';
-    color: #2e422f;
+    
     /* #3d6e41 */
     /* background: linear-gradient(450deg, #3a5e3d, #7ebf7a); */
     /* background: linear-gradient(450deg, #457582, #b3e1ed); */
@@ -148,11 +193,13 @@
     scroll-snap-align: start;
 }
 .section-1, .section-3, .section-5 {
-    background: linear-gradient(to right, #487e45, #fbffc2); 
+    background: linear-gradient(to right, #7bc377, #f0ffee); 
+    color: #2e422f;
 }
 
 .section-2, .section-4, .section-6{
-    background: linear-gradient(to right, #487e45, #83d2e9);
+    background: linear-gradient(to right, #99caff, #e7f2ff);
+    color: #150d35;
 }
 
 .sections img{
@@ -174,5 +221,211 @@
 .projects-body {
     background-color: #d0f2ce;
     height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
+.projects-body h1, h2{
+    text-align: center;
+    margin: 0em 0em 0em 0em;
+    /* padding-top: .5em; */
+    padding-left: 2em;
+    padding-right: 2em;
+    font-family: "Cocogoose";
+}
+#narrative-title{
+    font-size: 70px;
+}
+
+.psections #projects-intro {
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.psections p{
+    font-family: "Cocogoose-light";
+    padding-left: 10em;
+    padding-right: 10em;
+    margin: 0em 0em 0em 0em;
+    text-indent: 30pt;
+    font-size: 20px;
+}
+
+#creative-process, #soundscape-challenges-title {
+    font-size: 45px;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin: 0em;
+}
+
+#listen-here {
+    font-size: 25px;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin: 0em;
+}
+
+#creative-process {
+    gap: 0px;
+}
+
+.psections {
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    color: #2e422f;
+    display: flex;
+    flex-direction: column;
+    /* #3d6e41 */
+    /* background: linear-gradient(450deg, #3a5e3d, #7ebf7a); */
+    /* background: linear-gradient(450deg, #457582, #b3e1ed); */
+
+    /* background: linear-gradient(450deg, #253d63, #83d2e9); */
+    background: linear-gradient(to right, #bdeaba, white); 
+    scroll-snap-align: start;
+}
+
+.psection-8 a, button {
+    background-color: #6d9c71;
+    color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: "Cocogoose-light";
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+}
+
+.psection-8 button{
+    background-color: #6d9c71;
+    color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: "Cocogoose-light";
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+}
+
+.psection-8 button:hover{
+    color: #354569;
+}
+
+.psections img{
+    border:#6d9c71 20px solid;
+    border-radius: 25px;
+}
+
+#program-1 {
+    font-size: 20px;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin: 0em;
+    gap: 0px;
+    font-family: "Cocogoose-light";
+}
+
+.change-gap{
+    gap: 20px;
+}
+/* --------------- */
+
+.psections-b {
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    color: #1b2c4d;
+    display: flex;
+    flex-direction: column;
+    /* #3d6e41 */
+    /* background: linear-gradient(450deg, #3a5e3d, #7ebf7a); */
+    /* background: linear-gradient(450deg, #457582, #b3e1ed); */
+
+    /* background: linear-gradient(450deg, #253d63, #83d2e9); */
+    background: linear-gradient(to right, #92ade0, white); 
+    scroll-snap-align: start;
+}
+
+#visual-title{
+    font-size: 70px;
+}
+
+
+.psections-b p{
+    font-family: "Cocogoose-light";
+    padding-left: 10em;
+    padding-right: 10em;
+    margin: 0em 0em 0em 0em;
+    text-indent: 30pt;
+    font-size: 20px;
+}
+
+.psection-10{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#take-look, #visual-challenges-title, #creative-process-2{
+
+    font-size: 45px;
+}
+#yakult-img{
+    width: 410px;
+    display: grid;
+    border: none;
+    border-radius: 0px;
+}
+
+#program-2 {
+    font-family: "Cocogoose-light";
+}
+
+.psections-b img{
+    width: 550px;
+    border:#7895cf 20px solid;
+    border-radius: 25px;
+}
+
+
+.psections-b .psection-11 a, button{
+    background-color: #7895cf;
+    color: white;
+    font-family: "Cocogoose-light";
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+}
+
+.psection-11 button{
+    background-color: #7895cf;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-family: "Cocogoose-light";
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+}
+.psection-11 button:hover{
+    color: #354569;
+}
+
+.big {
+    font-size: 60px;
+}
+
+#projects-intro {
+    line-height:300%;
+}
